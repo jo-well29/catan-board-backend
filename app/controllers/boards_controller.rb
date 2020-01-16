@@ -38,6 +38,7 @@ class BoardsController < ApplicationController
 
   # DELETE /boards/1
   def destroy
+    puts 'params', params
     board = Board.destroy(params[:id])
     render json: { status: 204 }
   end
